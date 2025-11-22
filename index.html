@@ -138,7 +138,65 @@
           Он был таким — живым, любознательным, с ясным взглядом и улыбкой, которая оставалась в памяти надолго.
           Любил моменты: закаты, музыку, разговоры по душам, простые радости — мороженое, велосипед, игры с друзьями.
         </p>
-              <p>
+        <p>
           Этот сайт — не про прощание. Это про то, что Витя был здесь. Что он важен. Что он помнится.
           И пока кто-то вспоминает — он остаётся с нами.
         </p>
+      </div>
+
+      <div class="section">
+        <h2>Стих</h2>
+        <blockquote>
+          Ты ушёл, но не исчез.<br>
+          Ты — в закате, в тишине,<br>
+          В каждом добром чьём-то жесте,<br>
+          В памяти, что живёт во мне.<br><br>
+          Не прощай. Просто подожди —<br>
+          Я приду, когда соскучусь.<br>
+          Ты останься там, где свет,<br>
+          А я — помнить научусь.
+        </blockquote>
+      </div>
+
+      <div class="section">
+        <h2>Оставить воспоминание</h2>
+        <div id="waline"></div>
+      </div>
+
+      <div class="section">
+        <h2>Видео</h2>
+        <p>Моменты, которые остались с нами:</p>
+        <div style="position:relative; overflow:hidden; padding-top:56.25%; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.08); margin:20px 0;">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"></iframe>
+        </div>
+        <p><em>Замените ссылку на видео о Вите.</em></p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Витя Недоборич — Память
+  </footer>
+
+  <script type="module">
+    import { createComment } from 'https://unpkg.com/@waline/client@v3/dist/waline.mjs';
+
+    createComment({
+      el: '#waline',
+      serverURL: 'https://ваш-waline-сервер.vercel.app', // ← ЗАМЕНИТЬ, когда создадите Waline
+      lang: 'ru',
+      reaction: false,
+      uploadImage: true,
+      requiredMeta: ['nick'],
+      locale: {
+        nick: 'Имя',
+        mail: 'Email (не публикуется)',
+        placeholder: 'Поделитесь воспоминанием о Вите...'
+      }
+    });
+  </script>
+
+</body>
+</html>
